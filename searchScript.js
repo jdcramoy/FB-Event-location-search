@@ -26,21 +26,23 @@ chrome.runtime.onMessage.addListener(
         var onPageDataL = onPageData[i].innerHTML.toLowerCase();
          //Use indexOf method to check for any part of the input string on the page
         var n = onPageDataL.indexOf(inputL);
-         //conditional statement to determine a match on the page
+        // messaging to tell popup.js that the script is running 
         chrome.runtime.sendMessage({message: "working"}, function(response){
     console.log(response);
     });
-
+        //conditional statement to determine a match on the page
         if (n > -1 && input !== "") {
-             //function to automatically click the button on the page if there is a match
+             // console log for testing and QA purposes
              console.log("Pass");
              console.log(n);
+             //use .click(); to automatically click the button on the page if there is a match
              onPageData[i].click();
          } else {
              console.log("Fail");
              console.log(n);
          }
     };
+    // To pass message back to popup.js to notify the script is finished running
     chrome.runtime.sendMessage({message: "Done!"}, function(response){
     console.log(response);
     });
