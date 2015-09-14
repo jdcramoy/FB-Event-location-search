@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Location Search</title>
+    <style>
+    body {
+      width: 500px;
+      background-color: #415E9B;
+      margin: 20px;
+      font-size: 16px;
+    }
+
+    #searchMatch {
+      width: 150px;
+      height: 25px;
+      font-size:15px;
+    }
+
+    #userInput {
+      height: 21px;
+      width: 250px;
+      font-size: 15px;
+    }
+    #copy_background {
+      background-color: white;
+      padding: 10px;
+    }
+
+    #copy_background img {
+      display:block;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    #copy_background h2 {
+      text-align: center;
+    }
+    .form_container {
+      padding: 20px;
+    }
+    </style>
+
+  </head>
+  <body id='loading_screen'>
+      <center>
+        <h2> Facebook Event Invites by Location</h2>
+      </center>
+      <div id="copy_background">
+        <p> To get started, open the Facebook event invite window and enter a location and click "Search and Select".</p>
+        <p> The extension will automatically search the friends in the event invite window for their location and select them to be invited. Then, simply click "Invite" in the Facebook window to send your invitations.</p>
+        
+        <ul>
+          <li> Searches can be in lower case</li>
+          <li> Searches can be partial words </li>
+          <li> The extension will only search the friends that have been loaded on the page. To search a greater number of friends, continue to scroll down the list</li>
+         </ul> 
+       </div>
+      <div class="form_container">
+        <center>
+        <input type="text" name="searchValue" id="userInput">
+        <button id="searchMatch">Search and Select</button>
+        </center>
+      </div>
+      <script type="text/javascript" src="popup.js"></script>
+    </body>
+  </html>

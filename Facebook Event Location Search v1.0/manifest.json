@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Facebook Event Search",
+  "description": "This extension will be used to search Facebook Event Invite Pop Up Windows for specific locations.",
+  "version": "1.0",
+
+  "browser_action":{
+    "default_icon":"icon.png",
+    "default_popup": "popup.html"
+  },
+
+"permissions": [
+   "tabs","activeTab"
+   ]
+}
